@@ -1,28 +1,46 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div>
+        <div id="app">
+            <navbar></navbar>
+            <h2>
+                Welcome, Lets Schedule your day
+            </h2>
+        </div>
+        <div id="Form">
+            <ContentForm></ContentForm>
+        </div>
+        <Tasklist></Tasklist>
+    </div>
+
+
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+    import navbar from "./components/navbar";
+    import ContentForm from "./components/ContentForm";
+    import Tasklist from "./components/Tasklist";
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    export default {
+        name: 'App',
+        components: {
+            navbar,
+            ContentForm,
+            Tasklist
+        }
+    }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+    h2 {
+        padding-top: 20px;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #Form {
+        margin-top: 50px;
+    }
+
+
 </style>
